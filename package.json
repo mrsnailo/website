@@ -26,6 +26,6 @@
   "license": "ISC",
   "devDependencies": {
     "go": "^3.0.1",
-    "hugo-bin": "^0.86.0"
+    "hugo-bin": "^0.90.4"
   }
 }
