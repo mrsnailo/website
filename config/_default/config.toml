@@ -1,0 +1,74 @@
+ baseURL = "mrsnailo.github.io/website"
+title = "Shahid parvez"
+theme = "github.com/razonyang/hugo-theme-bootstrap"
+copyright = "Copyright © 2016-{year} Shahid parvez. All Rights Reserved."
+version: '3'
+services:
+  #database for wordpress
+  mysql_db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: noyaprovat
+      MYSQL_USER: mrsnailo
+      MYSQL_PASSWORD: 1234
+    expose:
+      - 3306
+      - 33060
+    volumes:
+      - mysql:/var/lib/mysql
+  # wordpress
+  wordpress:  
+    depends_on:
+      - mysql_db
+    image: wordpress:latest
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      WORDPRESS_DB_HOST: mysql_db:3306
+      WORDPRESS_DB_USER: mrsnailo
+      WORDPRESS_DB_NAME: noyaprovat
+      WORDPRESS_DB_PASSWORD: 1234
+    volumes:
+      - "./:/var/www/html"
+  # phpmyadmin
+  phpmyadmin:
+    depends_on:
+      - mysql_db
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports: 
+      - 3333:80
+    environment:
+      PMA_HOST: mysql_db
+      MYSQL_ROOT_PASSWORD: 1234
+    volumes:
+      - "./:/var/www/html/phpmyadmin"
+
+volumes:
+  mysql: {}
+
+
+defaultContentLanguage = "en"
+paginate = 10
+enableRobotsTXT = true
+enableEmoji = true
+pygmentsUseClasses = true
+
+[blackfriday]
+hrefTargetBlank = true
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+authors = "authors"
+
+[build]
+writeStats = true
+
+[permalinks]
+news = "/news/:year/:month/:title/"
+

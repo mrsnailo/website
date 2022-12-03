@@ -1,5 +1,5 @@
-module github.com/razonyang/hugo-theme-bootstrap-skeleton
+module github.com/mrsnailo/mrsnailo.github.io
 
-go 1.18
+go 1.19
 
-require github.com/razonyang/hugo-theme-bootstrap v1.0.0-alpha.15.0.20221115114142-09a902be931f // indirect
+require github.com/razonyang/hugo-theme-bootstrap v1.0.0-alpha.15.0.20221130014330-88a52088d974 // indirect

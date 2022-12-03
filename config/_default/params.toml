@@ -1,0 +1,54 @@
+ 
+mainSections = [ "blog", "posts", "news" ]
+description = "A blog where i dump the shit"
+keywords = "Hugo, Bootstrap, Blog Theme"
+brand = "@mrsnailo"
+palette = "purple"
+taxonomyPostCount = 20
+countTaxonomyPosts = true
+pinnedPostCount = 3
+tocWordCount = 1
+titleCase = true
+viewer = true
+
+[codeBlock]
+lineNos = false
+
+[post]
+featuredImage = true
+numberifyHeadings = true
+numberifyHeadingsSeparator = "."
+
+[archive]
+paginate = 20
+
+[siteVerification]
+
+[utterances]
+repo = "mrsnailo/mrsnailo.github.io"
+label = "comment"
+
+[search]
+paginate = 5
+
+  [search.fuse]
+  threshold = 0.1
+
+[reward]
+alipay = "images/reward/alipay.png"
+wechat = "images/reward/wechat.png"
+
+[pwa.manifest]
+short_name = "@mrsnailo"
+
+[contact]
+endpoint = "https://getform.io/f/56041c81-9e03-4c24-b9c5-61238854d4cd"
+
+[repo]
+url = "https://github.com/mrsnailo/mrsnailo.github.io"
+branch = "main"
+
+[topAppBar.social]
+github = "mrsnailo/mrsnailo.github.io"
+patreon = ""
+paypal = ""

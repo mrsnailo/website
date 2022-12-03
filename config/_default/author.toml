@@ -1,0 +1,13 @@
+name = "Shahid parvez"
+bio = "mrsnailo, paro, passinate developer."
+company = "mrsnailo"
+location = "Earth"
+params = { }
+
+[social]
+email = "shahidparvez.official@gmail.com"
+github = "mrsnailo/mrsnailo.github.io"
+twitter = "mrsnailo"
+patreon = "mrsnailo"
+paypal = ""
+rss = ""

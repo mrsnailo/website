@@ -1,0 +1,15 @@
+[en]
+languageName = "English"
+weight = 1
+
+[bn]
+languageName = "বাংলা"
+weight = 4
+
+  [bn.params]
+  dateFormat = "2006-01-02"
+  description = "personal hugo site"
+  keywords = "Hugo, Bootstrap, blog"
+
+    [bn.params.archive]
+    dateFormat = "01-02"
